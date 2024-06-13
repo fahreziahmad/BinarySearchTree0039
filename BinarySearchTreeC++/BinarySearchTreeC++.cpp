@@ -69,25 +69,45 @@ public:
 				currentNode = currentNode->rightchild;
 		}
 	}
-};
-void inorder(Node* ptr)
-{
-	if (ROOT == NULL)
+
+	void inorder(Node* ptr)
 	{
-		cout << "Tree is empty" << endl;
-		return;
+		if (ROOT == NULL)
+		{
+			cout << "Tree is empty" << endl;
+			return;
+		}
+		if (ptr != NULL)
+		{
+			inorder(ptr->leftchild);
+			cout << ptr->info << " ";
+			inorder(ptr->rightchild);
+		}
 	}
-	if (ptr != NULL)
+
+	void preorder(Node* ptr)
 	{
-		inorder(ptr->leftchild);
-		cout << ptr->info << " ";
-		inorder(ptr->rightchild);
+		if (ROOT == NULL)
+		{
+			cout << "Tree is empty" << endl;
+			return;
+		}
+		if (ptr != NULL)
+		{
+			cout << ptr->info << " ";
+			preorder(ptr->leftchild);
+			preorder(ptr->rightchild);
+		}
 	}
-}
-void preorder(Node* ptr)
-{
-	if (ROOT == NULL)
+
+	void postorder(Node* ptr)
 	{
-		cout << "Tree is empty" << endl;
-		return;
-	}
+		// Performs the postorder traversal of the tree
+		if (ROOT == NULL)
+		{
+			cout << "Tree is empty" << endl;
+			return;
+		}
+
+
+};  
