@@ -37,6 +37,21 @@ public:
 
 		Node* parent = NULL;
 		Node* currentNode = NULL;
+
+		if (parent == NULL)
+		{
+			ROOT = newNode;
+			return;
+		}
+
+		if (element < parent->info)
+		{
+			parent->leftchid = newNode;
+		}
+		else if (element > parent->info)
+		{
+			parent->rightchild = newNode;
+		}
 	}
 
 
