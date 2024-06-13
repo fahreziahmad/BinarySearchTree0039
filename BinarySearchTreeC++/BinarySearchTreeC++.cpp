@@ -149,4 +149,26 @@ int main()
 			obj.inorder(obj.ROOT);
 			break;
 		}
+		case '3':
+		{
+			obj.preorder(obj.ROOT);
+			break;
+		}
+		case '4':
+		{
+			obj.postorder(obj.ROOT);
+			break;
+		}
+		case '5':
+		{
+			exit(0);
+		}
+		default:
+		{
+			cout << "Invalid choice" << endl;
+			break;
+		}
+		}
+	}
+}
 
