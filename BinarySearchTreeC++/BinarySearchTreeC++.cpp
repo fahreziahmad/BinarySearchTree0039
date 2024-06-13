@@ -18,5 +18,30 @@ public:
 	}
 };
 
+class BinaryTree
+{
+public:
+	Node* ROOT;
+
+	BinaryTree()
+	{
+		ROOT = NULL; //
+	}
+
+	void insert(string element) //
+	{
+		Node* newNode = new Node(element, Null, Null);
+		newNode->info = element;
+		newNode->leftchid = NULL;
+		newNode->rightchild = NULL;
+
+		Node* parent = NULL;
+		Node* currentNode = NULL;
+	}
+
+
+
+};
+
 
 
